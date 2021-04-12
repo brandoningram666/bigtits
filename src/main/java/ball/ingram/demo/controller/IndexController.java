@@ -1,4 +1,4 @@
-package ball.ingram.com.Controller;
+package ball.ingram.demo.controller;
 
 
 import org.springframework.stereotype.Controller;
