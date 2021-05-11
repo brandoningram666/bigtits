@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>发起——大猛1文化交流中心</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/css/demo.css">
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
+
+</head>
+<body>
+<div th:insert="~{nav :: copy}"></div>
+<div class="container-fluid main ">
+    <div class="row">
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 ">
+            <h2><span class="glyphicon glyphicon-plus color " aria-hidden="true">发起</span></h2>
+            <hr>
+            <form action="/publish" method="post">
+                <input type="hidden" name="id" th:value="${id}">
+                <div class="form-group color">
+                    <label for="title">问题标题</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="输入问题" th:value="${title}">
+                </div>
+                <div class="form-group color">
+                    <label for="description">问题补充</label>
+                    <textarea name="description" id="description" class="form-control" cols="30" rows="10" th:text="${description}"></textarea>
+
+                </div>
+                <div class="form-group color">
+                    <label for="tag">问题标签</label>
+                    <input type="text" class="form-control" id="tag" name="tag" placeholder="添加标签，以逗号分隔" th:value="${tag}">
+                </div>
+                <div class="container-fluid main ">
+                    <div class="row">
+                            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" >
+                                <div class="alert alert-danger col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${error != null}" th:text="${error}"></div>
+                            </div>
+
+                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="btn btn-success btn-publish ">发布</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 color " >
+            <h3 >烤山药一块钱两块</h3>
+            1、我喜欢你的热情，你可以温暖我。我很讨厌自己不温不凉的思虑过度，也许我是个坏人，不过我只要你吻我一下就会变好呢。——王小波《爱你就像爱生命》
+            2、我真的不知怎么才能和你亲近起来，你好像是一个可望不可及的目标，我捉摸不透，追也追不上，就坐下哭了起来。——王小波《爱你就像爱生命》
+            3、你想知道我对你的爱情是什么吗？就是从心底里喜欢你，觉得你的一举一动都很亲切，不高兴你比喜欢我更喜欢别人。你要是喜欢了别人我会哭，但是还是喜欢你。你肯用这样的爱情回报我吗？就是你高兴我也高兴，你难过时我来安慰你，还有别爱别人！——王小波《爱你就像爱生命》
+        </div>
+    </div>
+</div>
+</body>
+</html>

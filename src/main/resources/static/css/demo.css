@@ -1,0 +1,33 @@
+body{
+
+}
+
+.main{
+    margin: 30px;
+    background-image: url("../img/ing.jpg");
+
+
+}
+
+.btn-publish{
+    float:right;
+    margin-bottom: 15px;
+}
+.color{
+    color: greenyellow;
+}
+.media-object{
+    width: 38px;
+    height: 38px;
+}
+.text-des{
+    font-size: 12px;
+    font-weight: normal;
+}
+.section{
+    margin-top: 15px;
+}
+.demo-menu{
+    color: black;
+    font-size: 13px;
+}
