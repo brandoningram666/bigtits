@@ -7,6 +7,7 @@ import ball.ingram.demo.model.User;
 import ball.ingram.demo.model.UserExample;
 import ball.ingram.demo.provider.GithubProvider;
 import ball.ingram.demo.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.UUID;
-
+@Slf4j
 @Controller
 public class AuthorizeController {
     @Autowired
@@ -68,6 +69,7 @@ public class AuthorizeController {
 
            return "redirect:/";
         }else{
+            log.error("github error ,{}",githubUser);
             return "redirect:/";
         }
 
