@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>大猛3文化交流中心</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/demo.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
+
+</head>
+<body>
+<div th:insert="~{nav :: copy}"></div>
+<div class="jumbotron">
+    <h1> 不要乱来</h1>
+    <p th:text="${message}">人生的路要治几周</p>
+    <p><a class="btn btn-primary btn-lg" href="/" role="button">回到首页</a></p>
+</div>
+<div th:insert="~{footer :: foot}"></div>
+</body>
+</html>

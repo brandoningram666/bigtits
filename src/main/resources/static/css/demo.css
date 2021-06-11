@@ -4,7 +4,7 @@ body{
 
 .main{
     margin: 30px;
-    background-image: url("../img/ing.jpg");
+    background-image: url("../images/ing.jpg");
 
 
 }
@@ -30,4 +30,93 @@ body{
 .demo-menu{
     color: black;
     font-size: 13px;
+}
+.jumbotron{
+    margin: 50px;
+}
+.media-body{
+    padding-top: 10px;
+}
+.comment{
+    margin: 10px 0;
+}
+.btn-comment{
+    float: right;
+    margin-bottom: 10px;;
+}
+.hr{
+    margin-top: 0;
+}
+.menu{
+    color: #999;
+}
+.span{
+    float: right;
+    color: #0f0f0f;
+}
+.menu .icon{
+    margin-right: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #0f0f0f;
+}
+.menu .icon:hover{
+    color: #499ef3;
+}
+
+.menu .comment-icon{
+    font-size: 20px;
+    cursor: pointer;
+    color: #0f0f0f;
+}
+.menu .comment-icon:hover{
+    color: #499ef3;
+}
+.menu .active{
+    color: #499ef3;
+}
+
+.comments{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid ;
+}
+.sub-comments{
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    padding-top: 15px;
+}
+.sub-comments .btn{
+    margin: 10px 0;
+}
+.question-title{
+    margin-top: 25px;
+}
+.question-tag{
+    margin-right: 5px;
+}
+.question-related{
+    line-height: 20px;
+    font-size: 13px;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.publish-tag-tab{
+    display: none;
+    margin-top: 10px;
+    
+}
+.publish-tag-tab .label-info{
+    white-space: normal;
+    margin-right: 10px;
+    margin: 5px 5px;
+    display: inline-block;
+
+}
+.foot{
+    padding: 10px 25%;
+    color: #666;
 }

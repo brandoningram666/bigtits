@@ -3,6 +3,8 @@ package ball.ingram.demo.controller;
 import ball.ingram.demo.dto.PaginationDTO;
 import ball.ingram.demo.mapper.UserMapper;
 import ball.ingram.demo.model.User;
+import ball.ingram.demo.service.NotificationService;
+import ball.ingram.demo.service.ProfileService;
 import ball.ingram.demo.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,10 @@ public class ProfileController {
     private UserMapper userMapper;
     @Autowired
     private QuestionService questionService;
+    @Autowired
+    private ProfileService profileService;
+    @Autowired
+    private NotificationService notificationService;
 
     @GetMapping("/profile/{action}")
     public String profile(@PathVariable("action") String action,
@@ -34,12 +40,16 @@ public class ProfileController {
         if("questions".equals(action)){
             model.addAttribute("section","questions");
             model.addAttribute("sectionName","我的问题");
+            PaginationDTO paginationDTO = questionService.list(user.getId(),page,size);
+            model.addAttribute("paginationDTO",paginationDTO);
         }else if ("replies".equals(action)){
+            PaginationDTO paginationDTO = notificationService.list(user.getId(),page,size);
+            Long unreadCount = notificationService.unreadCount(user.getId());
+            model.addAttribute("paginationDTO",paginationDTO);
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","我的回复");
         }
-        PaginationDTO paginationDTO = questionService.list(user.getId(),page,size);
-        model.addAttribute("paginationDTO",paginationDTO);
+
         return "profile";
 
     }
