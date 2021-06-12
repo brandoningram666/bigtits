@@ -1,6 +1,6 @@
-alter table USER alter column ID bigint auto_increment;
-alter table QUESTION alter column ID bigint auto_increment;
-alter table COMMENT alter column COMMENTOR bigint not null;
-alter table QUESTION alter column CREATOR bigint not null;
+alter table user alter column id bigint auto_increment;
+alter table question alter column id bigint auto_increment;
+alter table comment alter column commentor bigint not null;
+alter table question alter column creator bigint not null;
 
 
